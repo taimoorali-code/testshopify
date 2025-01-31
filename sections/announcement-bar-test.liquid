@@ -1,0 +1,63 @@
+{% schema %}
+    {
+      "name": "Custom Announcement Bar",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "announcement_text",
+          "label": "Announcement Text",
+          "default": "Welcome to our store!"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Login"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    <div class="custom-announcement-bar">
+      <div class="logo">
+        {% if section.settings.logo %}
+          <img src="{{ section.settings.logo | img_url: 'small' }}" alt="Logo">
+        {% endif %}
+      </div>
+      <div class="announcement-text">
+        {{ section.settings.announcement_text }}
+      </div>
+      <div class="login-button">
+        <a href="/account/login">{{ section.settings.button_text }}</a>
+      </div>
+    </div>
+    
+    <style>
+      .custom-announcement-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 10px 20px;
+      }
+      .logo img {
+        max-height: 40px;
+      }
+      .announcement-text {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .login-button a {
+        text-decoration: none;
+        background: #007aff;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+    </style>
+    
