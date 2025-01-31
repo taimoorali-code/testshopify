@@ -13,10 +13,11 @@
   "sections": {
     "announcement-bar-test": {
       "type": "announcement-bar-test",
+      "custom_css": [],
       "settings": {
         "logo": "shopify://shop_images/young-man-in-bright-fashion_925x_b3b7ebd6-c91f-496a-a516-45403497ea25.jpg",
-        "announcement_text": "Welcome to our store!",
-        "button_text": "Login"
+        "announcement_text": "Find The idea gift for your loved ones",
+        "button_text": "Choose Gift ->"
       }
     },
     "header": {
